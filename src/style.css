@@ -1,0 +1,152 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --heading-color: #D4A017;
+    --dark-blue: #0A1F44;
+    --grey: #2B2B2B;
+    --light-blue: #9BF2EA;
+    --rich-wine-red: #6B0F1A;
+}
+
+/*--------------- Page Style  --------------*/
+html,
+body {
+    min-height: 100vh;
+    min-width: 100vh;
+
+    background-image: url(./assets/img/argentinaFlag.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 2rem;
+}
+
+header nav button {
+    font-family: inherit;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--light-blue);
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+header nav button:nth-child(2) {
+    background-color: #fff;
+}
+
+#content {
+    text-align: center;
+    max-width: 50ch;
+    margin-right: 4rem;
+    color: var(--heading-color);
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    gap: 1rem;
+
+}
+
+/*------------- Menu Content -------------*/
+.menu-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+/*------------- Contact Content -------------*/
+.contact-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.contact-content a:link {
+    text-decoration: none;
+    color: var(--light-blue);
+}
+
+.contact-content a:visited {
+    text-decoration: none;
+    color: #fff;
+}
